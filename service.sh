@@ -1,0 +1,11 @@
+#!/system/bin/sh
+until [ "$(getprop sys.boot_completed)" = "1" ]; do
+    sleep 3
+done
+sleep 5
+
+ip link set wlan0 down
+ip link set wlan1 down
+ip link set wlan0 name wlan_internal_backup
+ip link set wlan1 name wlan0
+ip link set wlan0 up
