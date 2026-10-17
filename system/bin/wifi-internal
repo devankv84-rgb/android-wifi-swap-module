@@ -1,0 +1,7 @@
+#!/system/bin/sh
+ip link set wlan0 down
+ip link set wlan_internal_backup down
+ip link set wlan0 name wlan1
+ip link set wlan_internal_backup name wlan0
+ip link set wlan0 up
+echo "Swapped to Internal Wi-Fi (wlan0 = internal)"
