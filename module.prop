@@ -1,0 +1,6 @@
+id=wifi_swap_module
+name=Wi-Fi Interface Swapper
+version=v1.0
+versionCode=1
+author=YourName
+description=Swaps internal wlan0 and external wlan1 interfaces automatically on boot.
